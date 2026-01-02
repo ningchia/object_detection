@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Except Python files
+!*.py
+!*/
+!.gitignore
+!docker-compose.yml
+!Dockerfile
