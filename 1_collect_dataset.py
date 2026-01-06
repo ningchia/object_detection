@@ -2,7 +2,7 @@ import cv2
 import os
 import time
 
-def collect_data(output_folder='my_dataset/images'):
+def collect_data(output_folder='my_dataset/train/images'):
     # 1. 建立儲存資料夾
     if not os.path.exists(output_folder):
         os.makedirs(output_folder, exist_ok=True)

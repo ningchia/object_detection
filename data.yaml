@@ -1,0 +1,6 @@
+path: ./my_dataset  # 指向包含 train 和 val 的那個總目錄
+train: train/images
+val: val/images
+
+nc: 3
+names: ['cup', 'hand', 'phone'] # 務必與 classes.txt 順序一致
