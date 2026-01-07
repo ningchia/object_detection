@@ -72,4 +72,4 @@ def collect_data(output_folder='my_dataset/train/images'):
 
 if __name__ == "__main__":
     # 你可以自定義資料夾名稱
-    collect_data('my_dataset/images')
+    collect_data('my_dataset/train/images')
