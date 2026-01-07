@@ -2,6 +2,8 @@ import cv2
 import os
 import time
 
+RUN_IN_WSL = False  # 如果在 WSL 環境下運行，請設置為 True
+
 def collect_data(output_folder='my_dataset/train/images'):
     # 1. 建立儲存資料夾
     if not os.path.exists(output_folder):
@@ -15,6 +17,10 @@ def collect_data(output_folder='my_dataset/train/images'):
         print("錯誤: 無法打開相機")
         return
 
+    # 關鍵設定 for WSL：將格式設為 MJPG (降低頻寬需求，增加相容性)
+    if RUN_IN_WSL:
+        cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
+            
     print("--- 拍照模式開啟 ---")
     print("按 'S' 鍵：拍照並存檔 (Save)")
     print("按 'Q' 鍵：退出程式 (Quit)")
