@@ -3,6 +3,8 @@ import os
 import time
 
 RUN_IN_WSL = False  # 如果在 WSL 環境下運行，請設置為 True
+# 也可以用下面判斷
+# RUN_IN_WSL = (platform.system() == 'Linux' and 'microsoft' in platform.release().lower())
 
 def collect_data(output_folder='my_dataset/train/images'):
     # 1. 建立儲存資料夾
